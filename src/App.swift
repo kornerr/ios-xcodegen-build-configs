@@ -30,9 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         if
             let path = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist"),
             let xml = FileManager.default.contents(atPath: path),
-            let items = try? PropertyListSerialization.propertyList(from: xml, options: .mutableContainersAndLeaves, format: nil)
+            let items = try? PropertyListSerialization.propertyList(from: xml, options: .mutableContainersAndLeaves, format: nil) as? Dictionary<String, String>,
+            let clientId = items?["CLIENT_ID"]
         {
-            NSLog("GoogleService-Info.plist: '\(items)'")
+            NSLog("GoogleService-Info.plist's CLIENT_ID: '\(clientId)'")
         }
         else
         {

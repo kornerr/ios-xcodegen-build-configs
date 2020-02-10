@@ -3,10 +3,5 @@ set -e
 
 ROOT=$(cd "$(dirname "$0")" ; pwd -P)
 
-# TODO UNCOMMENT
-#xcodegen --spec $ROOT/app/xcodegen/project.yml --project $ROOT/app
-#pod install --repo-update --project-directory=$ROOT/app/cocoapods
-
-# TODO REMOVE
-/Users/mikhail_kapelko/p/ucim-xcodegen/Assembly/xcodegen/.ignore/2.11.0/.build/x86_64-apple-macosx/debug/xcodegen --spec $ROOT/app/xcodegen/project.yml --project $ROOT/app
-BUNDLE_GEMFILE=/Users/mikhail_kapelko/p/ucim-xcodegen/Assembly/bundler/Gemfile bundle exec pod install --repo-update --project-directory=$ROOT/app/cocoapods
+xcodegen --spec $ROOT/app/xcodegen/project.yml --project $ROOT/app
+pod install --repo-update --project-directory=$ROOT/app/cocoapods

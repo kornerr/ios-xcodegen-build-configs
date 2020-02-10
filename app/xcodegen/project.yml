@@ -13,6 +13,8 @@ targets:
         deploymentTarget: "9.0"
         sources:
             - path: "../../src"
+            - path: "../support/appstore/GoogleService-Info.plist"
+            - path: "../support/enterprise/GoogleService-Info.plist"
         settings:
             base:
                 CODE_SIGN_STYLE: Manual
@@ -22,15 +24,20 @@ targets:
                 appstore_debug:
                     INFOPLIST_FILE: "support/appstore_debug.Info.plist"
                     PRODUCT_BUNDLE_IDENTIFIER: su.koren.bc
+                    EXCLUDED_SOURCE_FILE_NAMES: "support/enterprise/*"
                 appstore_stage:
                     INFOPLIST_FILE: "support/appstore_stage.Info.plist"
                     PRODUCT_BUNDLE_IDENTIFIER: su.koren.bc
+                    EXCLUDED_SOURCE_FILE_NAMES: "support/enterprise/*"
                 appstore_release:
                     INFOPLIST_FILE: "support/appstore_release.Info.plist"
                     PRODUCT_BUNDLE_IDENTIFIER: su.koren.bc
+                    EXCLUDED_SOURCE_FILE_NAMES: "support/enterprise/*"
                 enterprise_stage:
                     INFOPLIST_FILE: "support/enterprise_stage.Info.plist"
                     PRODUCT_BUNDLE_IDENTIFIER: su.koren.bc.enterprise
+                    EXCLUDED_SOURCE_FILE_NAMES: "support/appstore/*"
                 enterprise_release:
                     INFOPLIST_FILE: "support/enterprise_release.Info.plist"
                     PRODUCT_BUNDLE_IDENTIFIER: su.koren.bc.enterprise
+                    EXCLUDED_SOURCE_FILE_NAMES: "support/appstore/*"
