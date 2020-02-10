@@ -1,0 +1,31 @@
+name: bc
+configs:
+    appstore_debug: debug
+    appstore_stage: release
+    appstore_release: release
+    enterprise_stage: release
+    enterprise_release: release
+targets:
+    bc:
+        scheme: {}
+        type: application
+        platform: iOS
+        deploymentTarget: "9.0"
+        sources:
+            - path: "../src"
+        settings:
+            base:
+                CODE_SIGN_STYLE: Manual
+                SWIFT_VERSION: 4.2
+                TARGETED_DEVICE_FAMILY: 1
+            configs:
+                appstore_debug:
+                    INFOPLIST_FILE: "support/appstore_debug.Info.plist"
+                appstore_stage:
+                    INFOPLIST_FILE: "support/appstore_stage.Info.plist"
+                appstore_release:
+                    INFOPLIST_FILE: "support/appstore_release.Info.plist"
+                enterprise_stage:
+                    INFOPLIST_FILE: "support/enterprise_stage.Info.plist"
+                enterprise_release:
+                    INFOPLIST_FILE: "support/enterprise_release.Info.plist"
