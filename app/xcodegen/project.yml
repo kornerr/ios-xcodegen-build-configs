@@ -21,11 +21,16 @@ targets:
             configs:
                 appstore_debug:
                     INFOPLIST_FILE: "support/appstore_debug.Info.plist"
+                    PRODUCT_BUNDLE_IDENTIFIER: su.koren.bc
                 appstore_stage:
                     INFOPLIST_FILE: "support/appstore_stage.Info.plist"
+                    PRODUCT_BUNDLE_IDENTIFIER: su.koren.bc
                 appstore_release:
                     INFOPLIST_FILE: "support/appstore_release.Info.plist"
+                    PRODUCT_BUNDLE_IDENTIFIER: su.koren.bc
                 enterprise_stage:
                     INFOPLIST_FILE: "support/enterprise_stage.Info.plist"
+                    PRODUCT_BUNDLE_IDENTIFIER: su.koren.bc.enterprise
                 enterprise_release:
                     INFOPLIST_FILE: "support/enterprise_release.Info.plist"
+                    PRODUCT_BUNDLE_IDENTIFIER: su.koren.bc.enterprise
