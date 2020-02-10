@@ -14,7 +14,7 @@
 
 This [XcodeGen][xcodegen] project sets specific `Info.plist` file based on Xcode build configuration:
 
-| № | Конфигурация сборки | Info.plist | GoogleService-Info.plist |
+| № | Build configuration | Info.plist | GoogleService-Info.plist |
 |---|---|---|---|
 | 1 | appstore_debug | `app/support/appstore_debug.Info.plist` | `app/support/appstore/GoogleService-Info.plist` |
 | 2 | appstore_stage | `app/support/appstore_stage.Info.plist` | `app/support/appstore/GoogleService-Info.plist` |
